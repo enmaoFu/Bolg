@@ -1,0 +1,45 @@
+html {
+    background: url(../img/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: "Open Sans",serif;
+    background: transparent;
+}
+
+h1 {
+    font-family: "Abel", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* Override B3 .panel adding a subtly transparent background */
+.panel {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.margin-base-vertical {
+    margin-top: 40px;
+}
+
+.invalid:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: red;  
+}
+
+.invalid::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: red;
+}
+
+input.invalid:-ms-input-placeholder{
+    color: red;
+}
+
+input.invalid::-webkit-input-placeholder {
+    color: red;
+}

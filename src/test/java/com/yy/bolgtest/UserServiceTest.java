@@ -32,12 +32,12 @@ public class UserServiceTest extends BaseTest {
     public void testSelect() throws Exception {
 
         BolgAdmin bolgAdmin = new BolgAdmin();
-        bolgAdmin.setId(1);
+        bolgAdmin.setId(3);
         bolgAdmin.setMybolgAdminKey("987");
 
         //查找用户
         BolgAdmin ba = bolgAdminDao.findOneById(bolgAdmin.getId());
-        System.out.println(bolgAdmin.getMybolgAdminKey() + "------" + ba.getMybolgAdminKey());
+        //System.out.println(bolgAdmin.getMybolgAdminKey() + "------" + ba.getMybolgAdminKey());
         if(ba == null){
             System.out.println("未找到该用户");
         }else{

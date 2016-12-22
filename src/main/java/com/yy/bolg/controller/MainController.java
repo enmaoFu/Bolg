@@ -43,7 +43,7 @@ public class MainController {
         bolgAdmin.setMybolgAdminKey(key);
         BolgAdmin s = bolgAdminService.findUser(bolgAdmin);
 
-        System.out.println(key + "------" + s.getMybolgAdminKey() + s.getId());
+        //System.out.println(key + "------" + s.getMybolgAdminKey() + s.getId());
         if (null == s) {
             System.out.println("未找到该用户");
         } else {

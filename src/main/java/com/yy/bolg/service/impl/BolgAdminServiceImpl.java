@@ -31,7 +31,7 @@ public class BolgAdminServiceImpl implements BolgAdminService{
             throw new UserNameCanNotBeNullException("User name can not be Null");
         }
         //用户密码不能为空检查
-        if (StringUtils.isEmpty(bolgAdmin.getMybolg_amdin_key())) {
+        if (StringUtils.isEmpty(bolgAdmin.getMybolg_admin_key())) {
             //抛出用户密码为空的自定义异常
             throw new UserPwdCanNotBeNullException("User name can not be Null");
         }

@@ -18,9 +18,9 @@
     <insert id="add" parameterType="BolgAdmin">
         INSERT INTO
         `mybolg_admin`
-        (`id`,`mybolg_amdin_key`)
+        (`id`,`mybolg_admin_key`)
         VALUES
-        (#{id},#{mybolg_amdin_key})
+        (#{id},#{mybolg_admin_key})
     </insert>
 
 </mapper>

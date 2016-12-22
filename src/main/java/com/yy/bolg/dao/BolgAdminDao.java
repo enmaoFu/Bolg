@@ -6,7 +6,9 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by John on 2016/12/22.
+ * 管理员Dao层
+ * @author enmaoFu
+ * @date 2016-12-22
  */
 public interface BolgAdminDao extends BaseDao<BolgAdmin> {
 

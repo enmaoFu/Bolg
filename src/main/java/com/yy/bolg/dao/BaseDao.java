@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 基本的DAO 数据库的增删改查 通过接口编程
  * @author enmaoFu
- * @date 2012-12-22
+ * @date 2016-12-22
  */
 public interface  BaseDao<T> {
 

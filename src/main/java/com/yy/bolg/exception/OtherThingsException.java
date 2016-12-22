@@ -1,7 +1,9 @@
 package com.yy.bolg.exception;
 
 /**
- * Created by Administrator on 2016/9/25.
+ * 自定义的异常类，其它无法处理异常
+ * @author enmaoFu
+ * @date 2016-12-22
  */
 public class OtherThingsException extends Exception {
     public OtherThingsException(String message) {

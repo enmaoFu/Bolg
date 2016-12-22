@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ *
+ * 控制器
+ * @author enmaoFu
+ * @date 2016-12-22
+ *
  * Controller表示这个是控制器在 spring-web.xml的以下配置
  * 扫描web相关的bean
  <context:component-scan base-package="com.yy.bolg.controller">

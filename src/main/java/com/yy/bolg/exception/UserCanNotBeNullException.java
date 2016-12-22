@@ -1,7 +1,9 @@
 package com.yy.bolg.exception;
 
 /**
- * Created by Administrator on 2016/9/25.
+ * 自定义的异常类，用户为空异常
+ * @author enmaoFu
+ * @date 20106-12-22
  */
 public class UserCanNotBeNullException extends Exception {
     public UserCanNotBeNullException(String message) {

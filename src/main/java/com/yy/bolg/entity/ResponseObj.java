@@ -1,5 +1,11 @@
 package com.yy.bolg.entity;
 
+/**
+ * 基本的状态码返回定义类
+ * @author enmaoFu
+ * @date 2016-12-22
+ * @param <T>
+ */
 public class ResponseObj<T> {
 	public final static int OK = 1, FAILED = 0, EMPUTY = -1;
 	public final static String OK_STR = "成功", FAILED_STR = "失败", EMPUTY_STR = "数据为空";

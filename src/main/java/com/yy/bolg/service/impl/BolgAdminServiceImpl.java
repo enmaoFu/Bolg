@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 /**
- * Created by John on 2016/12/22.
+ * 管理员的Service实现类，对接口里的方法进行构造填充
+ * @author enmaoFu
+ * @date 2016-12-22
  */
 @Service("bolgAdminService")
 public class BolgAdminServiceImpl implements BolgAdminService{

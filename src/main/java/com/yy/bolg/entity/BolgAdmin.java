@@ -1,7 +1,9 @@
 package com.yy.bolg.entity;
 
 /**
- * Created by John on 2016/12/22.
+ * 管理员实体类
+ * @author enmaoFu
+ * @date 2016-12-22
  */
 public class BolgAdmin {
 

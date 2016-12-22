@@ -4,7 +4,9 @@ import com.yy.bolg.entity.BolgAdmin;
 import com.yy.bolg.entity.User;
 
 /**
- * Created by John on 2016/12/22.
+ * 管理员的Service接口类，定义基本的对数据库数据操作
+ * @author enamoFu
+ * @date 2016-12-22
  */
 public interface BolgAdminService {
 

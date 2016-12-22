@@ -40,14 +40,14 @@ public class MainController {
         String result = null;
         BolgAdmin bolgAdmin = new BolgAdmin();
         bolgAdmin.setId(id);
-        bolgAdmin.setMybolg_admin_key(key);
+        bolgAdmin.setMybolgAdminKey(key);
         BolgAdmin s = bolgAdminService.findUser(bolgAdmin);
 
-        System.out.println(key + "------" + s.getMybolg_admin_key() + s.getId());
+        System.out.println(key + "------" + s.getMybolgAdminKey() + s.getId());
         if (null == s) {
             System.out.println("未找到该用户");
         } else {
-            if (key.equals(s.getMybolg_admin_key())) {
+            if (key.equals(s.getMybolgAdminKey())) {
                 resp.sendRedirect(BaseUrl + "main.html");
             } else {
                 System.out.println("密码错误");

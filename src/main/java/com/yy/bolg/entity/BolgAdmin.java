@@ -7,7 +7,7 @@ public class BolgAdmin {
 
     private int id;
 
-    private String mybolg_admin_key;
+    private String mybolgAdminKey;
 
     public int getId() {
         return id;
@@ -17,11 +17,11 @@ public class BolgAdmin {
         this.id = id;
     }
 
-    public String getMybolg_admin_key() {
-        return mybolg_admin_key;
+    public String getMybolgAdminKey() {
+        return mybolgAdminKey;
     }
 
-    public void setMybolg_admin_key(String mybolg_admin_key) {
-        this.mybolg_admin_key = mybolg_admin_key;
+    public void setMybolgAdminKey(String mybolgAdminKey) {
+        this.mybolgAdminKey = mybolgAdminKey;
     }
 }

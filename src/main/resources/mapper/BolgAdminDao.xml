@@ -7,7 +7,7 @@
     <!--查找-->
     <select id="findOneById" resultType="BolgAdmin" parameterType="int">
     SELECT
-    *
+    id,mybolg_admin_key mybolgAdminKey
     FROM
     `mybolg_admin`
     WHERE

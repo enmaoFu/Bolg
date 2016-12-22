@@ -24,7 +24,7 @@ public class UserServiceTest extends BaseTest {
     public void testAdd() {
         BolgAdmin bolgAdmin = new BolgAdmin();
         bolgAdmin.setId(2);
-        bolgAdmin.setMybolg_admin_key("987564321");
+        bolgAdmin.setMybolgAdminKey("987564321");
         bolgAdminDao.add(bolgAdmin);
     }
 
@@ -33,15 +33,15 @@ public class UserServiceTest extends BaseTest {
 
         BolgAdmin bolgAdmin = new BolgAdmin();
         bolgAdmin.setId(1);
-        bolgAdmin.setMybolg_admin_key("987");
+        bolgAdmin.setMybolgAdminKey("987");
 
         //查找用户
         BolgAdmin ba = bolgAdminDao.findOneById(bolgAdmin.getId());
-        System.out.println(bolgAdmin.getMybolg_admin_key() + "------" + ba.getMybolg_admin_key());
+        System.out.println(bolgAdmin.getMybolgAdminKey() + "------" + ba.getMybolgAdminKey());
         if(ba == null){
             System.out.println("未找到该用户");
         }else{
-            if(!ba.getMybolg_admin_key().equals(bolgAdmin.getMybolg_admin_key())){
+            if(!ba.getMybolgAdminKey().equals(bolgAdmin.getMybolgAdminKey())){
                 System.out.println("密码错误");
             }else{
                 System.out.println("密码正确");

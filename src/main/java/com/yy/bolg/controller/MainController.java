@@ -34,7 +34,7 @@ public class MainController {
     @Autowired
     private BolgAdminServiceImpl bolgAdminService;    //自动载入Service对象
     private ResponseObj responseObj;//bean对象
-    private String BaseUrl = "http://localhost:8080/Bolg/";
+    private String BaseUrl = "http://localhost:8080/bolg/";
     /**
      * 登陆页面
      * 这里我的方法是String方法，则是直接返回一个web页面的名字。

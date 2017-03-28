@@ -1,5 +1,7 @@
 package com.yy.bolg.controller;
 
+import com.google.gson.Gson;
+import com.yy.bolg.JsonEntity.MainJson;
 import com.yy.bolg.entity.BolgAdmin;
 import com.yy.bolg.entity.ResponseObj;
 import com.yy.bolg.service.impl.BolgAdminServiceImpl;
@@ -7,8 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -38,10 +44,12 @@ public class MainController {
     /**
      * 登陆页面
      * 这里我的方法是String方法，则是直接返回一个web页面的名字。
+     * produces="text/html;charset=UTF-8" 为了解决get方式请求的时候返回中文不乱码，web.xml过滤器只是过滤post请求
      * @return
      */
-    @RequestMapping(value = "/adminLogin",method = RequestMethod.GET)
-    public void login(HttpServletRequest req, HttpServletResponse resp, String key,int id) throws Exception {
+    @RequestMapping(value = "/adminLogin",method = RequestMethod.GET,produces="text/html;charset=UTF-8")
+    @ResponseBody
+    public String login(HttpServletRequest req, HttpServletResponse resp, String key,int id) throws Exception {
         String result = null;
         BolgAdmin bolgAdmin = new BolgAdmin();
         bolgAdmin.setId(id);
@@ -50,12 +58,30 @@ public class MainController {
 
         //System.out.println(key + "------" + s.getMybolgAdminKey() + s.getId());
         if (null == s) {
-            System.out.println("未找到该用户");
+            MainJson mj = new MainJson();
+            mj.setCode(1);
+            mj.setMesage("未找到该用户");
+            Map map = new HashMap();
+            map.put("key","");
+            mj.setData(map);
+
+            Gson gson = new Gson();
+            String data = gson.toJson(mj);
+            return data;
         } else {
             if (key.equals(s.getMybolgAdminKey())) {
                 resp.sendRedirect(BaseUrl + "main.html");
             } else {
-                System.out.println("密码错误");
+                MainJson mj = new MainJson();
+                mj.setCode(2);
+                mj.setMesage("key错误");
+                Map map = new HashMap();
+                map.put("key","");
+                mj.setData(map);
+
+                Gson gson = new Gson();
+                String data = gson.toJson(mj);
+                return data;
             }
         }
         /*if(key.equals("123")){
@@ -69,6 +95,7 @@ public class MainController {
             System.out.println("登陆失败");
             resp.sendRedirect(BaseUrl + "index.html");
         }*/
+        return null;
 
     }
 

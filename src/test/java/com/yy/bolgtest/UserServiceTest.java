@@ -33,7 +33,7 @@ public class UserServiceTest extends BaseTest {
 
         BolgAdmin bolgAdmin = new BolgAdmin();
         bolgAdmin.setId(3);
-        bolgAdmin.setMybolgAdminKey("987");
+        bolgAdmin.setMybolgAdminKey("1");
 
         //查找用户
         BolgAdmin ba = bolgAdminDao.findOneById(bolgAdmin.getId());

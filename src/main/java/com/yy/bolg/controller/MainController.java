@@ -56,7 +56,8 @@ public class MainController {
         bolgAdmin.setMybolgAdminKey(key);
         BolgAdmin s = bolgAdminService.findUser(bolgAdmin);
 
-        //System.out.println(key + "------" + s.getMybolgAdminKey() + s.getId());
+        /*System.out.println(key + "------" + s.getMybolgAdminKey() + s.getId());*/
+        System.out.println(key + "------" + id);
         if (null == s) {
             MainJson mj = new MainJson();
             mj.setCode(1);

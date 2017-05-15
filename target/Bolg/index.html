@@ -7,6 +7,44 @@
 <link href="css/getinto.css" type="text/css" rel="stylesheet"/>
 <link href="css/index.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="js/index.js"></script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        function signInCheck(){
+
+            var key = document.getElementById('key').value;
+            if(key.length == 0){
+                alert('key 不能为空');
+            }else if(key == 'asd'){
+                ConnectionLogin();
+            }else{
+                alert('key 不正确');
+            }
+
+        }
+
+        function ConnectionLogin() {
+            alert('0000000000000000');
+            // 也可以通过 params 对象传递参数
+            axios.get('http://localhost:8080/bolg/Login/adminLogin',{
+                params: {
+                    key:'admin',
+                    id:1
+                }
+            })
+                    .then(function (response) {
+                        console.log(response);
+                        alert(response+'then');
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                        alert(error+'catch');
+                    });
+            alert('1111111111111111');
+        }
+
+    </script>
 </head>
 
 <body>
@@ -27,8 +65,9 @@
                         <span class="input-group-addon">Login Key</span>
                         <input type="text" class="form-control input-lg" id="key" placeholder="Please Input Sign In Key"/>
                     </p>
+                    <!--onclick="signInCheck('edit.html')"-->
                     <p class="text-center">
-                        <button type="button" class="btn btn-success btn-lg" onclick="signInCheck('edit.html')">Sign In</button>
+                        <button type="button" class="btn btn-success btn-lg" onclick="signInCheck()">Sign In</button>
                     </p>
                 </form>
             </div>
